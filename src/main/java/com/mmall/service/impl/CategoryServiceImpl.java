@@ -50,7 +50,6 @@ public class CategoryServiceImpl implements ICategoryService {
         return ServerResponse.createByErrorMessage("添加品类失败");
     }
 
-
     /**
      * 修改品类名字
      * @param categoryId
@@ -72,7 +71,6 @@ public class CategoryServiceImpl implements ICategoryService {
         return  ServerResponse.createByErrorMessage("更新品类名字失败");
     }
 
-
     /**
      * 获取品类子节点(平级)
      * @param categoryId
@@ -93,7 +91,7 @@ public class CategoryServiceImpl implements ICategoryService {
      * @return
      */
     @Override
-    public ServerResponse selectCategoryAndChildById(Integer categoryId){
+    public ServerResponse<List<Integer>> selectCategoryAndChildById(Integer categoryId){
         Set<Category> categorySet = Sets.newHashSet();
         this.findChildCategory(categorySet,categoryId);
         List<Integer> categoryIdList = Lists.newArrayList();
