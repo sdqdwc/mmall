@@ -1,4 +1,4 @@
-package com.alipay.demo.trade;
+package com.mmall.trade;
 
 import com.alipay.demo.trade.model.builder.AlipayHeartbeatSynRequestBuilder;
 import com.alipay.demo.trade.model.hb.*;
