@@ -180,9 +180,9 @@ public class ProductServiceImpl implements IProductService {
             productListVoList.add(productListVo);
         }
         //pageHelper--收尾
-        PageInfo pageResult = new PageInfo(productListVoList);
-        //PageInfo pageResult = new PageInfo(productList);
-        //pageResult.setList(productListVoList);
+        //PageInfo pageResult = new PageInfo(productListVoList);
+        PageInfo pageResult = new PageInfo(productList);
+        pageResult.setList(productListVoList);
         return ServerResponse.createBySuccess(pageResult);
     }
 
@@ -208,9 +208,9 @@ public class ProductServiceImpl implements IProductService {
             productListVoList.add(productListVo);
         }
         //pageHelper--收尾
-        PageInfo pageResult = new PageInfo(productListVoList);
-        //PageInfo pageResult = new PageInfo(productList);
-        //pageResult.setList(productListVoList);
+        //PageInfo pageResult = new PageInfo(productListVoList);
+        PageInfo pageResult = new PageInfo(productList);
+        pageResult.setList(productListVoList);
         return ServerResponse.createBySuccess(pageResult);
     }
 
@@ -284,9 +284,9 @@ public class ProductServiceImpl implements IProductService {
             productListVoList.add(productListVo);
         }
         //pageHelper--收尾
-        PageInfo pageInfo = new PageInfo(productListVoList);
-        //PageInfo pageInfo = new PageInfo(productList);
-        //pageInfo.setList(productListVoList);
+        //PageInfo pageInfo = new PageInfo(productListVoList);
+        PageInfo pageInfo = new PageInfo(productList);
+        pageInfo.setList(productListVoList);
         return ServerResponse.createBySuccess(pageInfo);
     }
 
