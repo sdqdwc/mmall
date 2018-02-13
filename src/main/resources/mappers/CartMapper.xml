@@ -167,4 +167,12 @@
     from mmall_cart
     where user_id = #{userId}
   </select>
+  <!--查询已勾选的购物车商品-->
+  <select id="selectCheckedByUserId" parameterType="int" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    from mmall_cart
+    where user_id = #{userId}
+    and checked = 1
+  </select>
 </mapper>

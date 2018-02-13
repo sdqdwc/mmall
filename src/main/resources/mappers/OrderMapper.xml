@@ -213,4 +213,19 @@
     from mmall_order
     where order_no = #{orderNo}
   </select>
+  <!--查询订单列表-->
+  <select id="selectByUserId" parameterType="int" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    from mmall_order
+    where user_id = #{userId}
+    order by create_time desc
+  </select>
+  <!--查询全部订单-->
+  <select id="selectAllOrder" resultMap="BaseResultMap">
+    SELECT
+    <include refid="Base_Column_List"/>
+    from mmall_order
+    order by create_time desc
+  </select>
 </mapper>

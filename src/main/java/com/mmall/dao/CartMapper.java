@@ -1,5 +1,6 @@
 package com.mmall.dao;
 
+import com.mmall.common.Const;
 import com.mmall.pojo.Cart;
 import org.apache.ibatis.annotations.Param;
 
@@ -29,4 +30,6 @@ public interface CartMapper {
     int checkedOrUncheckedProduct(@Param("userId") Integer userId,@Param("checked") Integer checked, @Param("productId") Integer productId);
 
     int selectCartProductCount(@Param("userId") Integer userId);
+
+    List<Cart> selectCheckedByUserId(Integer userId);
 }
